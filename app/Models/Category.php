@@ -8,7 +8,7 @@ class Category extends Model
 {
     protected $table = 'category';
     protected $primaryKey = 'category_id';
-    protected $fillable  = ['name', 'type', 'file_id', 'parent_id'];
+    protected $fillable  = ['name', 'file_id', 'parent_id'];
 
     public function file()
     {

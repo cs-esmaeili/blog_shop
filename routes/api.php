@@ -41,41 +41,28 @@ Route::prefix('admin')->middleware([CheckHeaders::class])->group(function () {
         Route::post('/editPerson', [Person::class, 'editPerson'])->name('editPerson');
         Route::post('/roles', [Person::class, 'roles'])->name('roles');
         Route::post('/rolePermissions', [Person::class, 'rolePermissions'])->name('rolePermissions');
-        Route::post('/addPermission', [Person::class, 'addPermission'])->name('addPermission');
         Route::post('/missingPermissions', [Person::class, 'missingPermissions'])->name('missingPermissions');
+        Route::post('/addPermission', [Person::class, 'addPermission'])->name('addPermission');
+        Route::post('/deletePermission', [Person::class, 'deletePermission'])->name('deletePermission');
+
         Route::post('/addRole', [Person::class, 'addRole'])->name('addRole');
         Route::post('/deleteRole', [Person::class, 'deleteRole'])->name('deleteRole');
         Route::post('/editRole', [Person::class, 'editRole'])->name('editRole');
-        Route::post('/deletePermission', [Person::class, 'deletePermission'])->name('deletePermission');
 
 
         Route::post('/saveFile', [FileManager::class, 'saveFile'])->name('saveFile');
-
         Route::post('/saveFiles', [FileManager::class, 'saveFiles'])->name('saveFiles');
-
         Route::post('/deleteFile', [FileManager::class, 'deleteFile'])->name('deleteFile');
-
         Route::post('/deleteFiles', [FileManager::class, 'deleteFiles'])->name('deleteFiles');
-
         Route::post('/deleteFolder', [FileManager::class, 'deleteFolder'])->name('deleteFolder');
-
-
         Route::post('/renameFolder', [FileManager::class, 'renameFolder'])->name('renameFolder');
-
         Route::post('/renameFile', [FileManager::class, 'renameFile'])->name('renameFile');
-
         Route::post('/moveFileAndFolder', [FileManager::class, 'moveFileAndFolder'])->name('moveFileAndFolder');
-
         Route::post('/renameFileAndFolder', [FileManager::class, 'renameFileAndFolder'])->name('renameFileAndFolder');
-
         Route::post('/folderFiles', [FileManager::class, 'folderFiles'])->name('folderFiles');
-
         Route::post('/folderFilesLinks', [FileManager::class, 'folderFilesLinks'])->name('folderFilesLinks');
-
         Route::post('/deleteFolderOrFile', [FileManager::class, 'deleteFolderOrFile'])->name('deleteFolderOrFile');
-
         Route::post('/createFolder', [FileManager::class, 'createFolder'])->name('createFolder');
-
         Route::post('/fileInformation', [FileManager::class, 'fileInformation'])->name('fileInformation');
 
 

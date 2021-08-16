@@ -25,7 +25,6 @@ class deleteFolder extends FormRequest
     {
         return [
             'path' => 'required',
-            'params' => 'required',
             'type' => 'in:public,private'
         ];
     }

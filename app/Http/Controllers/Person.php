@@ -91,7 +91,7 @@ class Person extends Controller
     {
         $content =  json_decode($request->getContent());
         ModelsPerson::where('role_id', '=', $content->role_id)->update(['role_id' => $content->new_role_id]);
-        $result = Role::where('role_id', '=', $content->role_id)->delete();
+        Role::where('role_id', '=', $content->role_id)->delete();
         return response(['statusText' => 'ok', "message" => 'نقش مورد نظر حذف شد'], 200);
     }
     public function editRole(editRole $request)

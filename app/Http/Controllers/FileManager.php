@@ -126,9 +126,9 @@ class FileManager extends Controller
     public function renameFolder(renameFolder $request)
     {
         $content =  json_decode($request->getContent());
-        $location_old = FM::location($content->old_path);
-        $location_new = FM::location($content->new_path);
-        $result = FM::renameDirectory($content->old_name, $content->new_name, $location_old, $location_new);
+        $location_old = FM::location($content->old_name);
+        $location_new = FM::location($content->new_name);
+        $result = FM::renameDirectory($location_old, $location_new);
         if ($result) {
             return response(['statusText' => 'ok', 'message' => "نام پوشه تغییر کرد"], 200);
         } else {

@@ -11,11 +11,10 @@ use Illuminate\Support\Str;
 
 class FM
 {
-    public static function location($key)
+    public static function location($path)
     {
         $baseDir = env('FILE_MANAGER_BASE_DIRECTORY');
-        $location  =   $baseDir . $key;
-        return $location;
+        return ($baseDir . $path);
     }
     public static function saveFile($file, $location, $uploader)
     {
@@ -24,7 +23,6 @@ class FM
         }
         $result = DB::transaction(function () use ($file, $location, $uploader) {
             $newName =  Str::uuid() . "." .  $file->getClientOriginalExtension();
-            $hash = G::getHash($newName);
             $result = File::create([
                 "orginal_name" => $file->getClientOriginalName(),
                 "new_name" => $newName,
@@ -117,24 +115,18 @@ class FM
         }
         return false;
     }
-    public static function renameDirectory($old_name, $new_name, $old_path, $new_path)
+    public static function renameDirectory($old_path, $new_path)
     {
-        $result = DB::transaction(function () use ($old_name, $new_name, $old_path, $new_path) {
-            $temp = $old_path . $old_name;
-            $files =  File::where('location', 'LIKE', "%$temp%")->get();
+        $result = DB::transaction(function () use ($old_path, $new_path) {
+            $files =  File::where('location', 'LIKE', "%$old_path%")->get();
             if (count($files) > 0) {
                 for ($i = 0; $i < count($files); $i++) {
-                    $full_old_location = $files[$i]->location;
-                    $full_new_location = str_replace(($old_path . $old_name), ($new_path . $new_name), $full_old_location);
                     File::where('file_id', '=', $files[$i]->file_id)->update([
-                        'location' => $full_new_location,
+                        'location' => $new_path,
                     ]);
                 }
             }
-            if (!file_exists($new_path) && !is_dir($new_path)) {
-                mkdir($new_path,  0755, true);
-            }
-            rename($old_path . $old_name, $new_path . $new_name);
+            rename($old_path , $new_path);
             return true;
         });
         return $result;
