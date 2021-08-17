@@ -17,8 +17,8 @@ class Authentication extends Controller
             ->where('password', '=', G::getHash(G::changeWords($content->password)))->get();
         if ($person->count() == 1) {
             $person = $person[0];
-            if ($person->status == 0) {
-                return response(['status' => 'disabel'], 200);
+            if ($person->status == 'deactive') {
+                return response(['statusText' => 'fail', 'meessage' => 'کاربر غیر فعال است'], 200);
             }
             $token = $person->token;
             $token = G::newToken($person->person_id, $token->token_id, 30)['token'];

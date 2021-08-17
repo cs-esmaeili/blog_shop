@@ -18,12 +18,14 @@ class CreateProductTable extends Migration
             $table->timestamps();
             $table->foreignId('category_id');
             $table->foreign('category_id')->references('category_id')->on('category');
-            $table->string('name',255);
+            $table->string('name',255)->unique();
             $table->decimal('price',12,0);
             $table->decimal('sale_price',12,0);
-            $table->tinyInteger('status');
+            $table->enum('status',['available','unavailable' , 'invisibel']);
             $table->mediumInteger('stock');
             $table->mediumInteger('order_number');
+            $table->foreignId('file_id');
+            $table->foreign('file_id')->references('file_id')->on('file');
             $table->text('description');
         });
     }

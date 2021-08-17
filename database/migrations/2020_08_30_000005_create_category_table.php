@@ -19,7 +19,7 @@ class CreateCategoryTable extends Migration
             $table->string('name', 255);
             $table->foreignId('file_id');
             $table->foreign('file_id')->references('file_id')->on('file');
-            $table->integer('parent_id')->nullable(0);
+            $table->integer('parent_id')->nullable();
         });
     }
 

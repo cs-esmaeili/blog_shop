@@ -23,7 +23,7 @@ class AdminSeeder extends Seeder
             'password' => G::getHash(G::changeWords(env('ADMIN_PASSWORD'))),
             'token_id' => $token,
             'role_id' => 1,
-            'status' => 1,
+            'status' => 'active',
         ]);
         $file = File::create([
             'orginal_name' => 'firstFile',

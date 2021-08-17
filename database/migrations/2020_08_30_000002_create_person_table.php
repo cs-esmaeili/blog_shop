@@ -22,7 +22,7 @@ class CreatePersonTable extends Migration
             $table->foreign('role_id')->references('role_id')->on('role');
             $table->foreignId('token_id')->unique();
             $table->foreign('token_id')->references('token_id')->on('token');
-            $table->tinyInteger('status');
+            $table->enum('status',['active' ,'deactive']);
         });
     }
 

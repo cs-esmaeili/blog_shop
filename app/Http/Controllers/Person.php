@@ -134,7 +134,7 @@ class Person extends Controller
                     'password' => G::getHash(G::changeWords($content->password)),
                     'role_id' => $content->role_id,
                     'token_id' => $token_id,
-                    'status' => 1,
+                    'status' => 'active',
                 ]);
                 PersonInfo::create([
                     'person_id' => $person->person_id,

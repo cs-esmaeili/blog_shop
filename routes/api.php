@@ -10,6 +10,7 @@ use App\Http\Controllers\IndexPage;
 use App\Http\Controllers\KeyValue;
 use App\Http\Controllers\Person;
 use App\Http\Controllers\Post;
+use App\Http\Controllers\Product;
 use App\Http\Middleware\CheckHeaders;
 use App\Http\Middleware\CheckToken;
 /*
@@ -97,5 +98,11 @@ Route::prefix('admin')->middleware([CheckHeaders::class])->group(function () {
         Route::post('/top3Recent', [IndexPage::class, 'top3Recent'])->name('top3Recent');
         Route::post('/latestScreenshots', [IndexPage::class, 'latestScreenshots'])->name('latestScreenshots');
         Route::post('/latestPictures', [IndexPage::class, 'latestPictures'])->name('latestPictures');
+
+
+        Route::post('/addProduct', [Product::class, 'addProduct'])->name('addProduct');
+        Route::post('/deleteProduct', [Product::class, 'deleteProduct'])->name('deleteProduct');
+        Route::post('/productList', [Product::class, 'productList'])->name('productList');
+        Route::post('/editProduct', [Product::class, 'editProduct'])->name('editProduct');
     });
 });
