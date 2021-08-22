@@ -1,0 +1,17 @@
+.logInCard {
+    padding: 50px !important;
+    padding-top: 25px !important;
+}
+.login_logo {
+    width: 160px;
+    height: 160px;
+    font-size: 160px;
+}
+.login_input {
+    background-color: transparent !important;
+    color: white !important;
+    &::placeholder {
+        color: white !important;
+    }
+}
+

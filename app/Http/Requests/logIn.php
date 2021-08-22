@@ -24,7 +24,7 @@ class logIn extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required',
+            'username' => 'required|email',
             'password' => 'required',
         ];
     }

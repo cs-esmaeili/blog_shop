@@ -1,0 +1,21 @@
+@import "_variables.scss";
+@import "_LogIn.scss";
+@import "_modal.scss";
+
+.container-true {
+    background-color: $primary_dark;
+}
+
+.rtl_input {
+    &::placeholder {
+        text-align: right;
+    }
+    text-align: right;
+}
+.ltr_input {
+    &::placeholder {
+        text-align: left;
+    }
+    text-align: left;
+}
+

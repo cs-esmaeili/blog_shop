@@ -1,16 +1,14 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import { reducers } from "../reducers/index";
 import thunk from "redux-thunk";
-import { setToken } from "../actions/profile";
 
 export const store = createStore(
     reducers,
-    applyMiddleware(thunk)
-    // compose(
-    //     window.__REDUX_DEVTOOLS_EXTENSION__ &&
-    //         window.__REDUX_DEVTOOLS_EXTENSION__()
-    // )
+    compose(
+        applyMiddleware(thunk),
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+            window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
 );
 
-// store.subscribe(() => console.log(store.getState));
-
+store.subscribe(() => console.log(store.getState));

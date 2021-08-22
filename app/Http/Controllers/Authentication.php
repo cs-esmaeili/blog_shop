@@ -22,9 +22,17 @@ class Authentication extends Controller
             }
             $token = $person->token;
             $token = G::newToken($person->person_id, $token->token_id, 30)['token'];
-            return response(['statusText' => 'ok', 'token' => $token], 200);
+
+
+            $permission = $person->role->permissions()->select(['name'])->get()->toArray();
+            $permission_new = [];
+            foreach ($permission as $value) {
+                $permission_new[] = $value['name'];
+            }
+
+            return response(['statusText' => 'ok', 'token' => $token, 'informations' => ['data' => $person->informations(), 'permissions' => $permission_new]], 200);
         }
-        return response(['statusText' => 'fail'], 200);
+        return response(['statusText' => 'fail', 'message' => "نام کاربری یا رمز عبور اشتباه است"], 200);
     }
     public function logOut(logOut $request)
     {
