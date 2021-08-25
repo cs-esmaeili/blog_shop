@@ -2,6 +2,7 @@ import { Modal } from "react-bootstrap";
 import LogIn from "../pages/LogIn";
 import { Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
+
 const LogInModal = () => {
 
     const reLogIn = useSelector((state) => state.reLogIn);

@@ -1,0 +1,35 @@
+.sidebar-container {
+    background-color: $siebar;
+    color: white;
+}
+
+.sidebar-title {
+    background-color: $primary_light_dark;
+    text-align: center;
+    padding: 20px 25px 20px 25px;
+}
+
+.sidebar-content {
+    text-align: right !important;
+    padding: 25px;
+    width: 190px;
+}
+
+.sidebar-item-title {
+    span {
+        color: $sidebar_item_title;
+    }
+}
+
+.sidebar-item {
+    i {
+        border-style: solid;
+        border-width: 2px;
+        border-color: $sidebar_item_logo_border;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    span {
+        margin-right: 5px;
+    }
+}

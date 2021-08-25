@@ -1,6 +1,18 @@
 @import "_variables.scss";
 @import "_LogIn.scss";
 @import "_modal.scss";
+@import "_sidebar.scss";
+
+@font-face {
+    font-family: 'IRANSans';
+    src: url($base_url + "/assets/fonts/IRANSans.ttf") format('truetype');
+    font-style: normal;
+}
+
+// * :not(i) {
+//     font-family: 'IRANSans', Arial, sans-serif !important;
+//     font-weight: normal !important;
+// }
 
 .container-true {
     background-color: $primary_dark;
@@ -10,12 +22,14 @@
     &::placeholder {
         text-align: right;
     }
+
     text-align: right;
 }
+
 .ltr_input {
     &::placeholder {
         text-align: left;
     }
+
     text-align: left;
 }
-

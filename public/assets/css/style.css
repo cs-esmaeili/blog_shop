@@ -77,6 +77,45 @@
   width: auto !important;
 }
 
+.sidebar-container {
+  background-color: #2F3243;
+  color: white;
+}
+
+.sidebar-title {
+  background-color: #393e52;
+  text-align: center;
+  padding: 20px 25px 20px 25px;
+}
+
+.sidebar-content {
+  text-align: right !important;
+  padding: 25px;
+  width: 190px;
+}
+
+.sidebar-item-title span {
+  color: #C6CAD5;
+}
+
+.sidebar-item i {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #9D9EA2;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sidebar-item span {
+  margin-right: 5px;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url("http://localhost/blog_shop//assets/fonts/IRANSans.ttf") format("truetype");
+  font-style: normal;
+}
+
 .container-true {
   background-color: #2a2c39;
 }
