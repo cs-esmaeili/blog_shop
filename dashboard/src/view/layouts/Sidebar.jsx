@@ -1,12 +1,11 @@
 import statics from "../../statics.json";
 import { Image } from "react-bootstrap";
-import { FaGoogle } from 'react-icons/fa';
+import { FaGoogle, FaAngleLeft, FaAngleDown } from 'react-icons/fa';
+import Collaps from '../components/Collaps';
 
 const Sidebar = () => {
-
-
     return (
-        <div className='sidebar-container vh-100'>
+        <div className='sidebar-container'>
             <div className='sidebar-title'>
                 نیک آفرین
             </div>
@@ -23,13 +22,258 @@ const Sidebar = () => {
                 <div className='sidebar-item sidebar-item-title'>
                     <span>خانه</span>
                 </div>
-                <div className='sidebar-item'>
-                    <span>
-                        بازدید سایت
-                    </span>
-                    <FaGoogle />
-                </div>
-                <i class="fas fa-angle-left"></i>
+
+
+                <Collaps className='sidebar-item' indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                        <div>خانه _</div>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    بازدید سایت
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
+                <Collaps indexData={(status) => {
+                    return (
+                        <div className='sidebar-item'>
+                            {status ? <FaAngleDown /> : <FaAngleLeft />}
+
+                            <div>
+                                <span>
+                                    WWAW
+                                </span>
+                                <FaGoogle />
+                            </div>
+
+                        </div>
+                    )
+                }} colllapsData={
+                    <div className='sidebar-list'>
+                        <div>خانه _</div>
+                    </div>
+                } />
             </div>
         </div>
     );

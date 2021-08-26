@@ -2,6 +2,9 @@
 @import "_LogIn.scss";
 @import "_modal.scss";
 @import "_sidebar.scss";
+@import "_collapse.scss";
+@import "_header.scss";
+@import "_mainContent.scss";
 
 @font-face {
     font-family: 'IRANSans';
@@ -9,10 +12,29 @@
     font-style: normal;
 }
 
-// * :not(i) {
-//     font-family: 'IRANSans', Arial, sans-serif !important;
-//     font-weight: normal !important;
-// }
+* {
+    &::-webkit-scrollbar {
+        width: 12px;
+        background-color: $primary_dark;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: $primary_dark;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #555;
+    }
+    &:not(i) {
+        font-family: 'IRANSans', Arial, sans-serif !important;
+        font-weight: normal !important;
+    }
+}
+
 
 .container-true {
     background-color: $primary_dark;
