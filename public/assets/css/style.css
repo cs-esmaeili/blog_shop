@@ -87,7 +87,7 @@
 
 .sidebar-title {
   position: absolute;
-  background-color: #393e52;
+  background-color: #17B4A3;
   text-align: center;
   padding: 20px 25px 20px 25px;
   height: 60px;
@@ -172,14 +172,36 @@
 
 .header {
   position: absolute;
-  background-color: #393e52;
+  background-color: #17B4A3;
   text-align: center;
   padding: 20px 25px 20px 25px;
   height: 60px;
   left: 0;
   right: 0;
-  -webkit-box-shadow: inset -8px 0 6px -4px #2f2929;
-          box-shadow: inset -8px 0 6px -4px #2f2929;
+  -webkit-box-shadow: inset -8px 0 6px -1px #524747;
+          box-shadow: inset -8px 0 6px -1px #524747;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-icon {
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  color: white;
+}
+
+.header-item-badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: red;
+  font-size: 8px;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
 }
 
 .main-content-container {
@@ -199,7 +221,7 @@
 }
 
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 0px;
   background-color: #2a2c39;
 }
 
