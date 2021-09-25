@@ -1,3 +1,7 @@
+.sidebar {
+    transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
+}
+
 .sidebar-container {
     position: relative;
     background-color: $siebar;

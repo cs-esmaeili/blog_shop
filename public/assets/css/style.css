@@ -77,6 +77,11 @@
   width: auto !important;
 }
 
+.sidebar {
+  -webkit-transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
+  transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
+}
+
 .sidebar-container {
   position: relative;
   background-color: #2F3243;
@@ -212,6 +217,10 @@
   overflow: auto;
   padding-top: 70px;
   height: 100vh;
+}
+
+.dropdown-menu-custom {
+  background-color: brown;
 }
 
 @font-face {
