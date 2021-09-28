@@ -32,7 +32,7 @@ const LogIn = ({ relogin = false, showHideMethod = null }) => {
                     await dispatch(setRelogIn(false));
                 }
                 setTimeout(() => {
-                    // dispatch(setRelogIn(true));
+                    //dispatch(setRelogIn(true));
                 }, 5000);
             },
             (respons) => {

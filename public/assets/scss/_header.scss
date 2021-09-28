@@ -26,3 +26,19 @@
     width: 10px;
     height: 10px;
 }
+
+.header-dropdown-icon{
+    margin-left: 5px;
+}
+
+#header-dropdown {
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    font-size: 20px;
+    vertical-align: baseline;
+    &:focus {
+        box-shadow: none;
+    }
+
+}
